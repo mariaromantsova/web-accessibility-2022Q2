@@ -207,3 +207,46 @@ span:focus-visible:focus-visible {
   width: auto;
   clip: auto;
 }
+
+/* fix contrast */
+a,
+.hero.is-info .tabs.is-boxed li.is-active a {
+  color: #1b4fa1;
+}
+
+.button.is-info {
+  background: #0e598b;
+}
+
+.has-background-grey-light,
+.has-background-grey-lighter {
+  background-color: #e6e6e6 !important;
+}
+
+.hero.is-info {
+  background: #0a578a;
+}
+
+.has-text-grey-light {
+  color: #4f4f4f !important;
+}
+
+.tag:not(body).is-primary {
+  background: #00574a;
+}
+
+.tag:not(body).is-danger {
+  background: #a80022;
+}
+
+.tag:not(body).is-success {
+  background: #0d5928;
+}
+
+.help.is-danger {
+  color: #a30021;
+}
+
+.help.is-success {
+  color: #0e5d2a;
+}
