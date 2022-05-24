@@ -181,6 +181,25 @@ li {
   background-size: contain;
 }
 
+.breadcrumb {
+  display: flex;
+  padding: 20px;
+}
+
+.breadcrumb a {
+  color: #1b4fa1;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb a.current {
+  text-decoration: none;
+  pointer-events: none;
+  color: #000000;
+}
+
 a:focus-visible:focus-visible,
 button:focus-visible:focus-visible,
 input:focus-visible:focus-visible,
