@@ -19,8 +19,9 @@
             <a href="#" class="navbar-item logo-link">
               <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt="Epam logo">
             </a>
-            <a href="#about" class="visually-hidden">Skip to main content</a>
-            <button class="navbar-burger burger" data-target="navbarMenu">
+            <a href="#main" class="visually-hidden">Skip to main content</a>
+            <button class="navbar-burger burger" data-target="navbarMenu" aria-label="Open navigation menu"
+              aria-haspopup="true" aria-controls="navbarMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -67,7 +68,7 @@
       </div>
     </header>
 
-    <div class="hero-body" id="hero">
+    <div class="hero-body" id="hero" role="banner">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
           <h3 class="title has-text-white">We have web accessibility in mind</h3>
@@ -77,7 +78,7 @@
           <div class="box">
             <form class="field is-grouped">
               <p class="control is-expanded">
-                <input class="input">
+                <input class="input" aria-label="email">
               </p>
               <p class="control">
                 <button class="button is-info">Notify Me</button>
@@ -90,18 +91,18 @@
   </div>
 
   <div id="breadcrumbs">
-    <nav class="breadcrumb" role="breadcrumb">
+    <nav class="breadcrumb" aria-label="breadcrumb">
       <li><a href="./" class="current" aria-current="location">Home</a></li>
       <li><a href="index.html#topics">List of topics</a></li>
       <li><a href="index.html#services">Services</a></li>
     </nav>
   </div>
 
-  <main>
+  <main id="main">
 
-    <section class="section" id="about">
+    <section class="section" aria-labelledby="section1">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">About Us</h2>
+        <h2 class="title is-2" id="section1">About Us</h2>
         <div class="subtitle is-5">We of all trades, master of "some"</div>
         <div class="container">
           <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
@@ -238,10 +239,10 @@
       </div>
     </section>
 
-    <section class="hero has-background-grey-light">
+    <section class="hero has-background-grey-light" aria-labelledby="section2">
       <div class="container features">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Three key features</h2>
+          <h2 class="title is-2" id="section2">Three key features</h2>
           <div class="subtitle is-5">We don't hide what we do</div>
         </div>
 
@@ -304,29 +305,29 @@
       </div>
     </section>
 
-    <section id="topics">
+    <section id="topics" aria-labelledby="section3">
       <div class="hero is-info">
         <div class="hero-body">
           <div class="container">
-            <h3 class="title">List of topics</h3>
+            <h3 class="title" id="section3">List of topics</h3>
             <div class="subtitle">We are always in touch we the outside world</div>
           </div>
         </div>
         <div class="tabs is-boxed is-centered main-menu" id="nav">
-          <ul>
-            <li data-target="pane-1" id="1" class="is-active" tabindex="0">
+          <ul role="tablist">
+            <li role="tab" aria-expanded="true" data-target="pane-1" id="1" class="is-active" tabindex="0">
               <a>
                 <span class="icon is-small"><i class="fa fa-image"></i></span>
                 <span>Pictures</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3" tabindex="0">
+            <li role="tab" aria-expanded="false" data-target="pane-3" id="3" tabindex="0">
               <a>
                 <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
                 <span>Team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4" tabindex="0">
+            <li role="tab" aria-expanded="false" data-target="pane-4" id="4" tabindex="0">
               <a>
                 <span class="icon is-small"><i class="fa fa-film"></i></span>
                 <span>Video</span>
@@ -337,7 +338,7 @@
       </div>
 
       <div class="tab-content container">
-        <div class="tab-pane is-active" id="pane-1" class="level">
+        <div role="tabpanel" aria-labelledby="1" class="tab-pane is-active" id="pane-1" class="level">
           <div class="container">
             <div class="columns features">
               <div class="column is-4">
@@ -406,7 +407,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div class="tab-pane" role="tabpanel" aria-labelledby="3" id="pane-3">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -471,7 +472,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div class="tab-pane" role="tabpanel" aria-labelledby="4" id="pane-4">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <div class="title has-text-centered">Inspired video</div>
@@ -485,12 +486,10 @@
       </div>
     </section>
 
-
-
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="section4">
       <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Upcoming events</h2>
+          <h2 class="title is-2" id="section4">Upcoming events</h2>
           <div class="subtitle is-5">Outcoming dates for the best options</div>
         </div>
 
@@ -562,9 +561,9 @@
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section" aria-labelledby="section5">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Services</h2>
+        <h2 class="title is-2" id="section5">Services</h2>
         <div class="subtitle is-5">What can I do for you?</div>
       </div>
       <div class="container">
@@ -610,10 +609,10 @@
       </div>
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="section6">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Photos from past events</h2>
+          <h2 class="title is-2" id="section6">Photos from past events</h2>
         </div>
 
         <div class="container portfolio-container">
@@ -776,10 +775,10 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="section7">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Forum</div>
+          <h2 class="title is-2" id="section7">Forum</h2>
           <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
         </div>
 
@@ -801,7 +800,7 @@
           <div class="column is-9">
             <div class="box content">
               <div class="post">
-                <h4>How do you center a button in a box?</h4>
+                <h3>How do you center a button in a box?</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -823,7 +822,7 @@
               </div>
 
               <div class="post">
-                <h4>How can I make a button go full width?</h4>
+                <h3>How can I make a button go full width?</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -845,7 +844,7 @@
               </div>
 
               <div class="post">
-                <h4>TypeError: Data must be a string or a buffer when trying touse tabs</h4>
+                <h3>TypeError: Data must be a string or a buffer when trying touse tabs</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -867,7 +866,7 @@
               </div>
 
               <div class="post">
-                <h4>How to vertically center elements?</h4>
+                <h3>How to vertically center elements?</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -889,7 +888,7 @@
               </div>
 
               <div class="post">
-                <h4>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h4>
+                <h3>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -911,7 +910,7 @@
               </div>
 
               <div class="post">
-                <h4>How to make tiles wrap with CSS?</h4>
+                <h3>How to make tiles wrap with CSS?</h3>
                 <div class="media">
                   <div class="media-left">
                     <p class="image is-32x32">
@@ -937,25 +936,25 @@
       </div>
     </section>
 
-    <section class="section has-background-light">
+    <section class="section has-background-light" aria-labelledby="section8">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Contact us</h2>
+          <h2 class="title is-2" id="section8">Contact us</h2>
           <div class="subtitle is-5">Don't hesitate, ask anything</div>
         </div>
 
         <form class="column is-half is-offset-one-quarter box">
           <div class="field">
-            <label class="label">Name</label>
+            <label for="name" class="label">Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="name" class="input" type="text" placeholder="Text input">
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Username</label>
+            <label for="username" class="label">Username</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text">
+              <input id="username" class="input is-success" type="text">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
@@ -967,9 +966,9 @@
           </div>
 
           <div class="field">
-            <label class="label">Email</label>
+            <label for="email" class="label">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+              <input id="email" class="input is-danger" type="email" placeholder="Email input" value="hello@">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -981,10 +980,10 @@
           </div>
 
           <div class="field">
-            <label class="label">Subject</label>
+            <label for="subject" class="label">Subject</label>
             <div class="control">
               <div class="select">
-                <select>
+                <select id="subject">
                   <option>Select dropdown</option>
                   <option>With options</option>
                 </select>
@@ -993,16 +992,16 @@
           </div>
 
           <div class="field">
-            <label class="label">Message</label>
+            <label for="message" class="label">Message</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <textarea id="message" class="textarea" placeholder="Textarea"></textarea>
             </div>
           </div>
 
           <div class="field">
             <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="agree" class="checkbox">
+                <input id="agree" type="checkbox">
                 I agree to the <a href="#">terms and conditions</a>
               </label>
             </div>
@@ -1010,12 +1009,12 @@
 
           <div class="field">
             <div class="control">
-              <label class="radio">
-                <input type="radio" name="question">
+              <label for="agree-yes" class="radio">
+                <input id="agree-yes" type="radio" name="question">
                 Yes
               </label>
-              <label class="radio">
-                <input type="radio" name="question">
+              <label for="agree-no" class="radio">
+                <input id="agree-no" type="radio" name="question">
                 No
               </label>
             </div>
@@ -1187,10 +1186,10 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a href="#"><i class="fab fa-github-alt fa-2x"></i></a>
-          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" aria-label="github"><i class="fab fa-github-alt fa-2x" aria-hidden="true"></i></a>
+          <a href="#" aria-label="youtube"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+          <a href="#" aria-label="facebook"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <a href="#" aria-label="twitter"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank"
             title="Opens in a new tab">MIT</a> <i class="fa fa-external-link-alt" aria-hidden="true"></i>.
@@ -1244,7 +1243,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div role="dialog" aria-modal="true" aria-label="modal element with image" id="modal-image1"
+    class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="Bread">
@@ -1252,7 +1252,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div role="dialog" aria-modal="true" aria-label="modal element with image" id="modal-image2"
+    class="modal modal-fx-superScaled">
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="Lights">
