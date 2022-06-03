@@ -29,40 +29,64 @@
           </div>
 
           <nav id="navbarMenu" class="navbar-menu" role="navigation">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <a href="#" class="button is-white is-outlined">
+            <ul class="navbar-end" role="menubar">
+              <li class="navbar-item">
+                <a href="#" class="button is-white is-outlined" role="menuitem">
                   <span class="icon">
                     <i class="fa fa-home" aria-hidden="true"></i>
                   </span>
                   <span>Home</span>
                 </a>
-              </span>
-              <span class="navbar-item">
-                <a href="#" class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-superpowers" aria-hidden="true"></i>
-                  </span>
-                  <span>Examples</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a href="#" class="button is-white is-outlined">
+              </li>
+              <li class="navbar-item dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button is-white is-outlined" aria-haspopup="true" aria-controls="dropdown-menu"
+                    role="menuitem">
+                    <span class="icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    <span>Administration</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu dropdown-content" id="dropdown-menu" role="menu" aria-label="Administration">
+                  <a href="#administration" class="dropdown-item" role="menuitem">
+                    Administration
+                  </a>
+                  <a href="#teamsettings" class="dropdown-item" role="menuitem">
+                    Team Settings
+                  </a>
+                  <a href="#manageteam" class="dropdown-item" role="menuitem">
+                    Manage Your Team
+                  </a>
+                  <a href="#invitations" class="dropdown-item" role="menuitem">
+                    Invitations
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a href="#authentication" class="dropdown-item" role="menuitem">
+                    Authentication
+                  </a>
+                </div>
+              </li>
+              <li class="navbar-item">
+                <a href="#" class="button is-white is-outlined" role="menuitem">
                   <span class="icon">
                     <i class="fa fa-book" aria-hidden="true"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
-              </span>
-              <span class="navbar-item">
-                <a href="#" class="button is-white is-outlined">
+              </li>
+              <li class="navbar-item">
+                <a href="#" class="button is-white is-outlined" role="menuitem">
                   <span class="icon">
                     <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
                   <span>View Source</span>
                 </a>
-              </span>
-            </div>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -1266,6 +1290,7 @@
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script async src="js/menu-dropdown.js"></script>
 </body>
 
 </html>

@@ -39,7 +39,7 @@
 
 /* --- */
 
-.is-active {
+.is-active:not(.dropdown) {
   display: initial;
 }
 
