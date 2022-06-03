@@ -4,6 +4,8 @@
   background-size: cover;
 }
 
+/* tabs */
+
 .tabs {
   margin-bottom: -1px !important;
   position: relative;
@@ -18,6 +20,25 @@
   display: block;
   position: relative;
 }
+
+[role="tab"] {
+  transition: 0.2s ease;
+}
+
+[role="tab"]:hover a {
+  background: #1771ac;
+}
+
+[role="tab"]:active a {
+  background: #007fd4;
+}
+
+[role="tab"]:focus a {
+  border: 2px solid #fff;
+}
+
+/* --- */
+
 .is-active {
   display: initial;
 }
@@ -229,7 +250,7 @@ span:focus-visible:focus-visible {
 
 /* fix contrast */
 a,
-.hero.is-info .tabs.is-boxed li.is-active a {
+.hero.is-info .tabs.is-boxed a {
   color: #1b4fa1;
 }
 
